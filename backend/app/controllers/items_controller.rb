@@ -94,5 +94,6 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:title, :description, :image, tag_list: [])
+    with_defaults(image: "/placeholder.png")
   end
 end
